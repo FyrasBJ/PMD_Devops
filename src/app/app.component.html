@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="header">
+      <h2>Product Information</h2>
+    </div>
+  
+    <div class="form-group">
+      <label for="productId">Enter Product ID:</label>
+      <input type="text" id="productId" [(ngModel)]="productId" placeholder="Product ID" />
+    </div>
+  
+    <div class="button-group">
+      <button (click)="cGetProducts()">Fetch Product</button>
+    </div>
+  
+    <div *ngIf="product" class="product-info">
+      <h3>Product Details</h3>
+      <p><strong>ID:</strong> {{ product.id }}</p>
+      <p><strong>Name:</strong> {{ product.name }}</p>
+      <p><strong>Description:</strong> {{ product.description }}</p>
+      <p><strong>Price:</strong> {{ product.price }}</p>
+    </div>
+  </div>
+  
